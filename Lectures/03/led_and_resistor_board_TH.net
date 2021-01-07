@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source D:\Udemy\KiCad\Project_01\led_and_resistor_board\led_and_resistor_board.sch)
-    (date "1/4/2021 6:42:28 PM")
+    (source D:\Udemy\KiCad\Lecture_04\led_and_resistor_board\led_and_resistor_board.sch)
+    (date "1/6/2021 7:09:10 PM")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -28,8 +28,26 @@
       (datasheet ~)
       (libsource (lib Device) (part R) (description Resistor))
       (sheetpath (names /) (tstamps /))
-      (tstamp 5FF40041)))
+      (tstamp 5FF40041))
+    (comp (ref J1)
+      (value Conn_01x02_Male)
+      (footprint TerminalBlock:TerminalBlock_bornier-2_P5.08mm)
+      (datasheet ~)
+      (libsource (lib Connector) (part Conn_01x02_Male) (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5FF67E33)))
   (libparts
+    (libpart (lib Connector) (part Conn_01x02_Male)
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (docs ~)
+      (footprints
+        (fp Connector*:*_1x??_*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Conn_01x02_Male))
+      (pins
+        (pin (num 1) (name Pin_1) (type passive))
+        (pin (num 2) (name Pin_2) (type passive))))
     (libpart (lib Device) (part LED)
       (description "Light emitting diode")
       (docs ~)
@@ -55,13 +73,17 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
+    (library (logical Connector)
+      (uri "D:\\Program Files\\KiCad\\share\\kicad\\library/Connector.lib"))
     (library (logical Device)
       (uri "D:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib")))
   (nets
     (net (code 1) (name GND)
-      (node (ref D1) (pin 1)))
+      (node (ref D1) (pin 1))
+      (node (ref J1) (pin 1)))
     (net (code 2) (name +5V)
-      (node (ref R1) (pin 1)))
+      (node (ref R1) (pin 1))
+      (node (ref J1) (pin 2)))
     (net (code 3) (name "Net-(D1-Pad2)")
       (node (ref R1) (pin 2))
       (node (ref D1) (pin 2)))))

@@ -74,7 +74,7 @@ Wire Notes Line
 Text Notes 2800 3850 0    50   ~ 0
 A Simple LED Resistor Schematic
 Wire Wire Line
-	4800 4550 5250 4550
+	4800 4550 4900 4550
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5FF4DDCA
@@ -102,11 +102,38 @@ F 3 "~" H 3500 4650 50  0001 C CNN
 $EndComp
 Connection ~ 3500 4650
 Wire Wire Line
-	3500 4650 3500 4800
+	3500 4650 3500 4750
 Wire Notes Line
 	2750 5250 2750 3750
 Wire Notes Line
 	2750 5250 6000 5250
 Wire Notes Line
 	2750 3750 6000 3750
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5FF67E33
+P 5250 4900
+F 0 "J1" H 5222 4782 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 5222 4873 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5250 4900 50  0001 C CNN
+F 3 "~" H 5250 4900 50  0001 C CNN
+	1    5250 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 4550 4900 4800
+Wire Wire Line
+	4900 4800 5050 4800
+Connection ~ 4900 4550
+Wire Wire Line
+	4900 4550 5250 4550
+Wire Wire Line
+	5050 4900 4850 4900
+Wire Wire Line
+	4850 4900 4850 4750
+Wire Wire Line
+	4850 4750 3500 4750
+Connection ~ 3500 4750
+Wire Wire Line
+	3500 4750 3500 4800
 $EndSCHEMATC

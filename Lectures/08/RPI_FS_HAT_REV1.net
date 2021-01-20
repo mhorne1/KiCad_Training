@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source D:\Udemy\KiCad\Lecture_08\Raspberry_Pi_Hat\RPI_FS_HAT_REV1\RPI_FS_HAT_REV1.sch)
-    (date "1/18/2021 8:20:34 PM")
+    (date "1/19/2021 8:27:20 PM")
     (tool "Eeschema (5.1.9)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref J1)
       (value Raspberry_Pi_2_3)
-      (footprint Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical)
+      (footprint Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical)
       (datasheet https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf)
       (libsource (lib Connector) (part Raspberry_Pi_2_3) (description "expansion header for Raspberry Pi 2 & 3"))
       (sheetpath (names /) (tstamps /))
@@ -59,7 +59,7 @@
       (tstamp 6006E36E))
     (comp (ref U1)
       (value DHT22)
-      (footprint Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical)
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical)
       (datasheet http://akizukidenshi.com/download/ds/aosong/DHT11.pdf)
       (libsource (lib Sensor) (part DHT11) (description "Temperature and humidity module"))
       (sheetpath (names /) (tstamps /))

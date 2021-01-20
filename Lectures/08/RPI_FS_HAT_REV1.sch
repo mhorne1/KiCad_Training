@@ -19,7 +19,7 @@ U 1 1 60064330
 P 6450 3450
 F 0 "J1" H 5750 4850 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 5750 4775 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 6450 3450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 6450 3450 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 6450 3450 50  0001 C CNN
 	1    6450 3450
 	1    0    0    -1  
@@ -85,7 +85,7 @@ U 1 1 6006FD6F
 P 4250 3550
 F 0 "U1" H 4006 3596 50  0000 R CNN
 F 1 "DHT22" H 4006 3505 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4250 3150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4250 3150 50  0001 C CNN
 F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 4400 3800 50  0001 C CNN
 	1    4250 3550
 	1    0    0    -1  

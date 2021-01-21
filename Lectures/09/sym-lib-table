@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Custom_RTC_Library)(type Legacy)(uri ${KIPRJMOD}/Custom_RTC_Library/Custom_RTC_Library.lib)(options "")(descr ""))
+)

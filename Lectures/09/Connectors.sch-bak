@@ -104,11 +104,11 @@ GND
 Text HLabel 4600 4600 0    50   Input ~ 0
 Vcc
 Text Notes 4325 2325 0    50   ~ 0
-N7 - Serial Connector
+N6 - Serial Connector
 Text Notes 6075 2325 0    50   ~ 0
-N8 - I2C Connector
+N7 - I2C Connector
 Text Notes 4350 3625 0    50   ~ 0
-N9 - GPIO Connector
+N8 - GPIO Connector
 Text Notes 6175 3625 0    50   ~ 0
-N10 - SPI Connector
+N9 - SPI Connector
 $EndSCHEMATC

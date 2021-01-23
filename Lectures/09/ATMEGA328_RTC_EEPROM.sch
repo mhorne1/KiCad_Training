@@ -14,28 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:Battery BT2
-U 1 1 60094422
-P 10500 2800
-F 0 "BT2" H 10608 2846 50  0000 L CNN
-F 1 "3.3V" H 10608 2755 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 10500 2860 50  0001 C CNN
-F 3 "~" V 10500 2860 50  0001 C CNN
-	1    10500 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C3
-U 1 1 60096B17
-P 9750 2850
-F 0 "C3" H 9868 2896 50  0000 L CNN
-F 1 "10uF" H 9868 2805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9788 2700 50  0001 C CNN
-F 3 "~" H 9750 2850 50  0001 C CNN
-	1    9750 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Custom_RTC_Library:DS1337S+_v1 U4
 U 1 1 600A6BF5
 P 8000 2925
@@ -45,28 +23,6 @@ F 2 "Package_SO:SO-8_5.3x6.2mm_P1.27mm" H 8000 2925 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/DS1337-DS1337C.pdf" H 8000 2925 50  0001 C CNN
 	1    8000 2925
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D D2
-U 1 1 600D352F
-P 7750 1600
-F 0 "D2" V 7796 1520 50  0000 R CNN
-F 1 "D" V 7705 1520 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7750 1600 50  0001 C CNN
-F 3 "~" H 7750 1600 50  0001 C CNN
-	1    7750 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D3
-U 1 1 600D3E15
-P 8250 1600
-F 0 "D3" V 8296 1520 50  0000 R CNN
-F 1 "D" V 8205 1520 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8250 1600 50  0001 C CNN
-F 3 "~" H 8250 1600 50  0001 C CNN
-	1    8250 1600
-	0    -1   -1   0   
 $EndComp
 Text Label 8750 4600 2    50   ~ 0
 MISO
@@ -146,13 +102,6 @@ $EndSheet
 Wire Wire Line
 	8750 5750 9000 5750
 Wire Wire Line
-	8750 5875 8875 5875
-Wire Wire Line
-	8875 6000 8875 5875
-Connection ~ 8875 5875
-Wire Wire Line
-	8875 5875 9000 5875
-Wire Wire Line
 	10250 4600 10500 4600
 Wire Wire Line
 	10250 4975 10500 4975
@@ -226,31 +175,19 @@ Wire Wire Line
 	8600 2925 8750 2925
 Wire Wire Line
 	8600 3175 8750 3175
-Text Label 7750 1250 0    50   ~ 0
+Text Label 7625 1250 0    50   ~ 0
 Vcc
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 600D5613
-P 8750 1450
-F 0 "BT1" H 8868 1546 50  0000 L CNN
-F 1 "CR1225" H 8868 1455 50  0000 L CNN
-F 2 "Battery:Battery_CR1225" V 8750 1510 50  0001 C CNN
-F 3 "~" V 8750 1510 50  0001 C CNN
-	1    8750 1450
+P 8750 1525
+F 0 "BT1" H 8868 1621 50  0000 L CNN
+F 1 "CR2032" H 8868 1530 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1058_1x2032" V 8750 1585 50  0001 C CNN
+F 3 "~" V 8750 1585 50  0001 C CNN
+	1    8750 1525
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7750 1750 7750 1850
-Wire Wire Line
-	8250 1750 8250 1850
-Wire Wire Line
-	7750 1250 7750 1450
-Wire Wire Line
-	8250 1450 8250 1250
-Wire Wire Line
-	8250 1250 8750 1250
-Wire Wire Line
-	8750 1750 8750 1550
 $Comp
 L Memory_EEPROM:24LC1025 U3
 U 1 1 600AAAA0
@@ -315,23 +252,8 @@ Wire Wire Line
 Connection ~ 5550 2550
 Wire Wire Line
 	5550 2550 5550 2500
-Wire Wire Line
-	9750 3000 9750 3125
-Wire Wire Line
-	10500 3125 10500 3000
-Text Label 10125 2250 0    50   ~ 0
+Text Label 6075 5750 0    50   ~ 0
 Vcc
-Wire Wire Line
-	9750 2700 9750 2500
-Wire Wire Line
-	9750 2500 10125 2500
-Wire Wire Line
-	10500 2500 10500 2600
-Wire Wire Line
-	10125 2250 10125 2375
-Connection ~ 10125 2500
-Wire Wire Line
-	10125 2500 10500 2500
 $Comp
 L Device:LED D1
 U 1 1 60097236
@@ -349,46 +271,24 @@ NoConn ~ 1200 2575
 NoConn ~ 1200 2675
 NoConn ~ 2400 3475
 NoConn ~ 2400 3575
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 601BAE2E
-P 10125 2375
-F 0 "#FLG0101" H 10125 2450 50  0001 C CNN
-F 1 "PWR_FLAG" V 10125 2503 50  0000 L CNN
-F 2 "" H 10125 2375 50  0001 C CNN
-F 3 "~" H 10125 2375 50  0001 C CNN
-	1    10125 2375
-	0    1    1    0   
-$EndComp
-Connection ~ 10125 2375
-Wire Wire Line
-	10125 2375 10125 2500
 Wire Notes Line
 	4750 1000 6250 1000
 Wire Notes Line
 	6500 1000 9250 1000
-Wire Notes Line
-	9500 1000 11000 1000
 Text Notes 6500 975  0    50   ~ 0
 N3 - Clock/Calendar and Backup Battery
 Text Notes 4750 975  0    50   ~ 0
 N2 - EEPROMs
 Text Notes 625  975  0    50   ~ 0
 N1 - Atmega328P with Oscillator
-Text Notes 9500 975  0    50   ~ 0
+Text Notes 4750 5225 0    50   ~ 0
 N4 - External Battery Terminal
 Wire Notes Line
 	6500 4000 9250 4000
 Wire Notes Line
-	9500 4000 11000 4000
-Wire Notes Line
 	6500 4000 6500 1000
 Wire Notes Line
 	9250 1000 9250 4000
-Wire Notes Line
-	9500 4000 9500 1000
-Wire Notes Line
-	11000 1000 11000 4000
 Wire Notes Line
 	8250 4250 8250 6250
 Wire Notes Line
@@ -555,36 +455,25 @@ F 3 "~" H 2125 1575 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR014
-U 1 1 600D5E04
-P 8875 6000
-F 0 "#PWR014" H 8875 5750 50  0001 C CNN
-F 1 "GND" H 8880 5827 50  0000 C CNN
-F 2 "" H 8875 6000 50  0001 C CNN
-F 3 "" H 8875 6000 50  0001 C CNN
-	1    8875 6000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR015
 U 1 1 600D67BE
-P 10125 3325
-F 0 "#PWR015" H 10125 3075 50  0001 C CNN
-F 1 "GND" H 10130 3152 50  0000 C CNN
-F 2 "" H 10125 3325 50  0001 C CNN
-F 3 "" H 10125 3325 50  0001 C CNN
-	1    10125 3325
+P 5000 6325
+F 0 "#PWR015" H 5000 6075 50  0001 C CNN
+F 1 "GND" H 5005 6152 50  0000 C CNN
+F 2 "" H 5000 6325 50  0001 C CNN
+F 3 "" H 5000 6325 50  0001 C CNN
+	1    5000 6325
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 600D7A06
-P 8750 1750
-F 0 "#PWR013" H 8750 1500 50  0001 C CNN
-F 1 "GND" H 8755 1577 50  0000 C CNN
-F 2 "" H 8750 1750 50  0001 C CNN
-F 3 "" H 8750 1750 50  0001 C CNN
-	1    8750 1750
+P 8750 1725
+F 0 "#PWR013" H 8750 1475 50  0001 C CNN
+F 1 "GND" H 8755 1552 50  0000 C CNN
+F 2 "" H 8750 1725 50  0001 C CNN
+F 3 "" H 8750 1725 50  0001 C CNN
+	1    8750 1725
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -598,20 +487,8 @@ F 3 "" H 8000 3625 50  0001 C CNN
 	1    8000 3625
 	1    0    0    -1  
 $EndComp
-Text Label 10225 3225 0    50   ~ 0
+Text Label 6075 6250 0    50   ~ 0
 GND
-Wire Wire Line
-	9750 3125 10125 3125
-Wire Wire Line
-	10125 3225 10125 3125
-Wire Wire Line
-	10125 3225 10225 3225
-Connection ~ 10125 3125
-Wire Wire Line
-	10125 3125 10500 3125
-Wire Wire Line
-	10125 3325 10125 3225
-Connection ~ 10125 3225
 $Comp
 L power:GND #PWR07
 U 1 1 600DFD7C
@@ -878,8 +755,6 @@ F 3 "~" H 5775 3400 50  0001 C CNN
 $EndComp
 Text Label 5550 3250 0    50   ~ 0
 Vcc
-Wire Wire Line
-	7750 1850 8000 1850
 $Comp
 L Device:C C10
 U 1 1 601C2800
@@ -893,9 +768,6 @@ F 3 "~" H 7750 2175 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8000 2325 8000 2175
-Connection ~ 8000 1850
-Wire Wire Line
-	8000 1850 8250 1850
 Wire Wire Line
 	7900 2175 8000 2175
 Connection ~ 8000 2175
@@ -934,4 +806,128 @@ Wire Notes Line
 	6250 1000 6250 5000
 Wire Notes Line
 	4750 1000 4750 5000
+Wire Wire Line
+	7625 1850 8000 1850
+Wire Wire Line
+	8000 1850 8375 1850
+Connection ~ 8000 1850
+Wire Wire Line
+	8375 1450 8375 1250
+Wire Wire Line
+	8375 1250 8750 1250
+Wire Wire Line
+	8750 1250 8750 1325
+Wire Wire Line
+	8750 1725 8750 1625
+$Comp
+L Diode:MBR0520LT D3
+U 1 1 600C40F8
+P 8375 1600
+F 0 "D3" V 8400 1925 50  0000 R CNN
+F 1 "MBR0520LT" V 8325 2100 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 8375 1425 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBR0520LT1-D.PDF" H 8375 1600 50  0001 C CNN
+	1    8375 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8375 1850 8375 1750
+$Comp
+L Diode:MBR0520LT D2
+U 1 1 600AFB22
+P 7625 1600
+F 0 "D2" V 7650 1925 50  0000 R CNN
+F 1 "MBR0520LT" V 7575 2100 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7625 1425 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBR0520LT1-D.PDF" H 7625 1600 50  0001 C CNN
+	1    7625 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7625 1450 7625 1250
+Wire Wire Line
+	7625 1850 7625 1750
+Wire Wire Line
+	8750 5875 9000 5875
+$Comp
+L Transistor_FET:IRLML6401 Q1
+U 1 1 600E5C2A
+P 5500 5850
+F 0 "Q1" V 5842 5850 50  0000 C CNN
+F 1 "IRLML6401" V 5751 5850 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5700 5775 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6401pbf.pdf?fileId=5546d462533600a401535668b96d2634" H 5500 5850 50  0001 L CNN
+	1    5500 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Battery BT2
+U 1 1 60094422
+P 5000 5950
+F 0 "BT2" H 5108 5996 50  0000 L CNN
+F 1 "3.3V" H 5108 5905 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" V 5000 6010 50  0001 C CNN
+F 3 "~" V 5000 6010 50  0001 C CNN
+	1    5000 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 601BAE2E
+P 6000 5825
+F 0 "#FLG0101" H 6000 5900 50  0001 C CNN
+F 1 "PWR_FLAG" V 6000 5953 50  0000 L CNN
+F 2 "" H 6000 5825 50  0001 C CNN
+F 3 "~" H 6000 5825 50  0001 C CNN
+	1    6000 5825
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 5750 5000 5750
+$Comp
+L Device:CP C3
+U 1 1 60096B17
+P 6000 6025
+F 0 "C3" H 6118 6071 50  0000 L CNN
+F 1 "10uF" H 6118 5980 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6038 5875 50  0001 C CNN
+F 3 "~" H 6000 6025 50  0001 C CNN
+	1    6000 6025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6150 5000 6250
+Wire Wire Line
+	5000 6250 5500 6250
+Wire Wire Line
+	5500 6050 5500 6250
+Connection ~ 5500 6250
+Wire Wire Line
+	5000 6325 5000 6250
+Connection ~ 5000 6250
+Wire Wire Line
+	5700 5750 6000 5750
+Wire Wire Line
+	5500 6250 6000 6250
+Wire Wire Line
+	6000 6175 6000 6250
+Connection ~ 6000 6250
+Wire Wire Line
+	6000 6250 6075 6250
+Wire Wire Line
+	6000 5875 6000 5825
+Connection ~ 6000 5750
+Wire Wire Line
+	6000 5750 6075 5750
+Connection ~ 6000 5825
+Wire Wire Line
+	6000 5825 6000 5750
+Wire Notes Line
+	4750 5250 4750 6750
+Wire Notes Line
+	4750 6750 6750 6750
+Wire Notes Line
+	6750 6750 6750 5250
+Wire Notes Line
+	6750 5250 4750 5250
 $EndSCHEMATC
